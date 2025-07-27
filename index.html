@@ -7,6 +7,7 @@
 <style>
 body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #fff; }
 header { background: #000; padding: 1em; text-align: center; }
+header img { height: 60px; max-width: 180px; display: block; margin: 0 auto 10px; }
 header h1 { color: gold; font-size: 2.5em; margin: 0; }
 nav a { color: gold; margin: 0 10px; text-decoration: none; font-weight: bold; }
 .hero { background-color: #222; padding: 2em; text-align: center; }
@@ -17,10 +18,14 @@ ul { line-height: 1.8; }
 .contact-info, .footer-contact { background: #1a1a1a; padding: 1em; margin-top: 1em; }
 .gallery-preview img { width: 45%; margin: 1%; border-radius: 10px; }
 .btn { background: gold; color: #000; padding: 0.7em 1.2em; text-decoration: none; border-radius: 5px; }
+form label { display: block; margin-top: 1em; }
+form input, form textarea, form select { width: 100%; padding: 0.5em; margin-top: 0.3em; border-radius: 5px; border: none; }
+form button { margin-top: 1em; background: gold; color: #000; padding: 0.7em 1.5em; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
 </style>
 </head>
 <body>
 <header>
+<img src="images/logo.png" alt="LOJ Detailing Logo">
 <h1>LOJ Detailing</h1>
 <p>Mobile Detailing, Fleet Wash & Driveway Cleaning</p>
 <nav>
@@ -34,29 +39,45 @@ ul { line-height: 1.8; }
 
 <section class="hero">
 <h2>Premium Mobile Detailing & Pressure Washing Across MD, DC & VA</h2>
-<p>Fleet Wash | Driveways | Rust Removal | Interior Add-Ons</p>
+<p>Fleet Wash | Driveways | Stain & Mold Removal | Interior & Exterior Packages</p>
 <a href="#contact" class="btn">Request a Free Quote</a>
 </section>
 
 <section id="services">
 <h2>Services</h2>
 <ul>
-<li>Driveway Pressure Washing – Starting at $125</li>
-<li>Mobile Fleet Washing – Amazon DSP, USPS, FedEx</li>
-<li>Rust and Oil Stain Removal – Per Spot</li>
-<li>Interior Add-Ons – Vacuum, Shampoo, Odor Removal</li>
-<li>Concrete, Sidewalk & Pad Cleaning</li>
+<li>Interior Vacuuming & Shampoo Extraction</li>
+<li>Full Car Detailing (Interior + Exterior)</li>
+<li>Waxing & Sealant Application</li>
+<li>Tire Shine & Wheel Cleaning</li>
+<li>Engine Bay Cleaning</li>
+<li>Headlight Restoration</li>
+<li>Stain Removal (Seats, Carpet, Upholstery)</li>
+<li>Mold Removal (Interior Disinfection)</li>
+<li>Cigarette Smoke Odor Removal</li>
+<li>Driveway Pressure Washing</li>
+<li>Sidewalk / Pad Cleaning</li>
+<li>Rust & Oil Spot Removal</li>
+<li>Mobile Fleet Washing (USPS, FedEx, Amazon, Commercial)</li>
 </ul>
 </section>
 
 <section id="pricing">
 <h2>Pricing Table</h2>
 <ul>
-<li>Driveway (2-car): $125 – $180</li>
-<li>Fleet Van Exterior: $35 / Add Interior: +$10</li>
-<li>Box Truck Wash: $45 – $60</li>
-<li>Rust Removal: $25 – $60 per spot</li>
-<li>Engine Bay Cleaning: $20</li>
+<li>Interior Vacuum + Shampoo Extraction: $120 – $150</li>
+<li>Exterior Detail + Wax + Tire Shine: $80 – $130</li>
+<li>Full Car Detail (Interior + Exterior): $150 – $210</li>
+<li>Engine Bay Cleaning: $20 – $30</li>
+<li>Headlight Restoration: $50 – $80</li>
+<li>Stain Removal: $20 – $50</li>
+<li>Mold Removal: $80 – $120</li>
+<li>Cigarette Smoke Odor Removal: $60 – $100</li>
+<li>Fleet Van (Exterior): $30 – $35</li>
+<li>Add Fleet Interior Wipe: +$10</li>
+<li>Driveway Wash (2-car): $125 – $180</li>
+<li>Large Pad / 4-car Driveway: $180 – $250</li>
+<li>Rust/Oil Spot Treatment: $25 – $60 per spot</li>
 </ul>
 </section>
 
@@ -68,16 +89,41 @@ ul { line-height: 1.8; }
 
 <section id="about">
 <h2>About LOJ Detailing</h2>
-<p>Founded by Habtamu Gebereselassie, LOJ Detailing is a mobile detailing and power washing company based in Silver Spring, Maryland. We specialize in fleet contracts, driveway restoration, and long-term maintenance detailing using safe and efficient methods. Fully licensed and insured, serving Maryland, DC, and Northern Virginia.</p>
+<p>Founded by Habtamu Gebereselassie, LOJ Detailing is a mobile detailing and power washing company based in Silver Spring, Maryland. We specialize in full car detailing, stain and odor removal, engine cleaning, fleet contracts, and driveway restoration using safe and efficient methods. Fully licensed and insured, serving Maryland, DC, and Northern Virginia.</p>
 </section>
 
 <section id="contact">
-<h2>Contact Us</h2>
+<h2>Contact / Booking Form</h2>
 <div class="contact-info">
 <p><strong>Phone:</strong> 301-905-6017</p>
 <p><strong>Email:</strong> habtamugebreselassie869@gmail.com</p>
 <p><strong>Location:</strong> Silver Spring, MD – Mobile Service Area</p>
 </div>
+<form action="mailto:habtamugebreselassie869@gmail.com" method="POST" enctype="text/plain">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" required>
+
+<label for="service">Service Requested</label>
+<select id="service" name="service">
+<option value="Full Detail">Full Detail</option>
+<option value="Interior Only">Interior Only</option>
+<option value="Exterior Only">Exterior Only</option>
+<option value="Fleet Service">Fleet Service</option>
+<option value="Driveway Cleaning">Driveway Cleaning</option>
+<option value="Other">Other</option>
+</select>
+
+<label for="message">Additional Details</label>
+<textarea id="message" name="message" rows="4"></textarea>
+
+<button type="submit">Submit Booking Request</button>
+</form>
 </section>
 
 <footer>
