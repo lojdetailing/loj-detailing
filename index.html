@@ -2,231 +2,303 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LoJ Detailing | Mobile Car Detailing in MD • DC • VA</title>
-  <meta name="description" content="Book a top-rated mobile detailer near you. Transparent pricing, premium results. Serving MD • DC • VA. Fleets welcome." />
-  <link rel="canonical" href="https://logdetailing.com/" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:site_name" content="LoJ Detailing" />
-  <meta property="og:title" content="Book a Top-Rated Mobile Detailer Near You" />
-  <meta property="og:description" content="Transparent pricing. We come to you. MD • DC • VA. Fleets welcome." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://logdetailing.com/" />
-  <meta property="og:image" content="https://logdetailing.com/images/og-cover.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Icons -->
-  <link rel="icon" href="/images/favicon.png" sizes="any" />
-  <link rel="apple-touch-icon" href="/images/favicon.png" />
-
-  <!-- In-file CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LoJ Detailing – Mobile Detailing in MD • DC • VA</title>
+  <meta name="description" content="Top-rated mobile detailing. Transparent pricing. We come to you. Serving MD • DC • VA." />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
   <style>
     :root{
-      --bg:#0a0f16; --card:#0f1520; --ink:#e9eef5; --muted:#a9b3c4; --gold:#e6be5a; --brand:#1e8fff; --ok:#27c07d; --warn:#f7b733;
+      --bg:#0f172a;      /* page background (slate-900) */
+      --card:#111827;   /* card background */
+      --muted:#9ca3af;  /* secondary text */
+      --brand:#22c55e;  /* green accent */
+      --brand-2:#60a5fa;/* blue accent */
+      --text:#e5e7eb;   /* main text */
+      --white:#ffffff;
+      --shadow:0 8px 30px rgba(0,0,0,.35);
+      --radius:20px;
     }
-    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo img{height:42px;width:42px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.35))}
-    nav a{margin:0 10px;color:var(--ink);opacity:.9}
-    .btn{background:var(--brand);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
-    .btn.gold{background:var(--gold);color:#101317}
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;margin:18px 0 6px}
-    .card{background:var(--card);border:1px solid #1d2533;border-radius:16px;padding:18px}
-    h1{font-size:40px;line-height:1.1;margin:.2em 0 .4em}
-    .sub{color:var(--muted)}
-    .pill{display:inline-flex;gap:10px;align-items:center;background:#0b1220;border:1px solid #1d2533;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
-    .grid{display:grid;gap:16px}
-    .grid.pack{grid-template-columns:repeat(3,minmax(0,1fr));}
-    .kpi{display:flex;gap:16px;margin-top:10px}
-    .kpi .dot{height:8px;width:8px;border-radius:99px;background:var(--ok)}
-    label{font-size:13px;color:var(--muted)}
-    input,select,textarea{width:100%;background:#0a111d;border:1px solid #1d2434;color:var(--ink);padding:10px 12px;border-radius:10px;outline:none}
-    .pricebar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:10px}
-    .price{font-weight:800;font-size:18px}
-    .tag{font-size:12px;color:#cdd6e6;background:#0c1422;border:1px solid #1b2536;padding:4px 8px;border-radius:8px}
-    h2{margin:26px 0 10px}
-    ul.clean{margin:8px 0 0 18px;color:var(--muted)}
-    footer{margin:40px 0 10px;color:var(--muted);font-size:14px;text-align:center}
-    @media (max-width:920px){ .hero{grid-template-columns:1fr} header{flex-wrap:wrap;gap:10px}}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--brand-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(to bottom,rgba(15,23,42,.95),rgba(15,23,42,.75));backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:44px;height:44px;border-radius:10px;object-fit:cover}
+    .brand h1{margin:0;font-size:20px;letter-spacing:.5px}
+    .nav a.btn{background:var(--brand);color:#062; color:var(--bg);padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:24px}
+    .hero{padding:56px 0}
+    .hero .grid{grid-template-columns:1.1fr .9fr}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .p24{padding:24px}
+    h2{font-size:28px;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    /* Estimate form */
+    form label{font-size:12px;color:var(--muted);display:block;margin:12px 0 6px}
+    form input,form select,form textarea{
+      width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+      background:#0b1220;color:var(--text);outline:none
+    }
+    form textarea{min-height:88px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .submit{margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn-primary{background:var(--brand);color:var(--bg);border:0;padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--text);padding:12px 16px;border-radius:12px}
+    /* Packages */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .price{font-size:18px;color:var(--brand-2);font-weight:800}
+    ul.clean{padding-left:18px;margin:8px 0}
+    ul.clean li{margin:6px 0;color:#cbd5e1}
+    .pill{display:inline-block;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.35);color:#86efac;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.2px}
+    /* Sections */
+    section{padding:28px 0}
+    section h3{font-size:24px;margin:0 0 10px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    footer{margin-top:40px;padding:28px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .grid,.split,.cards{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+    }
   </style>
-
-  <!-- Local business JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"AutoDetailing",
-    "name":"LoJ Detailing",
-    "url":"https://logdetailing.com/",
-    "logo":"https://logdetailing.com/images/logo.png",
-    "image":"https://logdetailing.com/images/og-cover.png",
-    "areaServed":["Maryland","District of Columbia","Virginia"],
-    "telephone":"+13019056017",
-    "email":"lojdetailing@gmail.com",
-    "priceRange":"$$",
-    "sameAs":[]
-  }
-  </script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
-        <img alt="LoJ Detailing logo" src="images/logo.png" />
-        <strong>LoJ Detailing</strong>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <!-- Your logo file path -->
+        <img src="/images/logo.png" alt="LoJ Detailing Logo">
+        <h1>LoJ Detailing</h1>
       </div>
-      <nav>
+      <nav style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
         <a href="#packages">Packages</a>
         <a href="#fleet">Fleet</a>
-        <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="tel:13019056017" class="btn">Call: (301) 905-6017</a>
       </nav>
-      <a class="btn" href="#booking">Book Now</a>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <div>
-        <div class="pill">MD • DC • VA &nbsp;·&nbsp; Fully insured · Pro-grade chemicals</div>
-        <h1>Book a Top-Rated Mobile Detailer Near You</h1>
-        <p class="sub">Transparent pricing. We come to you. Choose a package and lock your time window.</p>
-
-        <div class="kpi">
-          <div class="pill"><span class="dot"></span> 4.9★ average</div>
-          <div class="pill"><span class="dot"></span> 100% mobile</div>
-          <div class="pill"><span class="dot"></span> Fleet programs</div>
+  <!-- Hero + Estimate -->
+  <div class="wrap hero">
+    <div class="grid">
+      <div class="card p24">
+        <h2>Book a Top-Rated Mobile Detailer Near You</h2>
+        <p class="lead">Transparent pricing. We come to you. Choose a package and get a guaranteed time window.</p>
+        <div class="badges">
+          <span class="badge">MD • DC • VA</span>
+          <span class="badge">Fully insured</span>
+          <span class="badge">Professional, body-shop safe chemicals</span>
+          <span class="badge">4.9 ★ average</span>
         </div>
+        <section class="p24" style="padding-left:0">
+          <a class="btn-ghost" href="#packages">See Packages</a>
+          <a class="btn-ghost" href="#fleet">Fleet Plans</a>
+        </section>
+      </div>
 
-        <div style="margin-top:16px;display:flex;gap:12px">
-          <a class="btn gold" href="#packages">See Packages</a>
-          <a class="btn" href="#fleet">Fleet Plans</a>
+      <!-- Instant Estimate / Lead Form -->
+      <div class="card p24">
+        <h3>Instant Estimate</h3>
+        <form id="leadForm" method="post">
+          <div class="row">
+            <div>
+              <label>Year</label>
+              <input name="year" type="text" placeholder="e.g., 2020" required>
+            </div>
+            <div>
+              <label>Make</label>
+              <input name="make" type="text" placeholder="e.g., Toyota" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Model</label>
+              <input name="model" type="text" placeholder="e.g., Camry" required>
+            </div>
+            <div>
+              <label>Package</label>
+              <select name="package" required>
+                <option value="Express (Bronze)">Express (Bronze)</option>
+                <option value="Standard (Silver)">Standard (Silver)</option>
+                <option value="Full Interior (Gold)">Full Interior (Gold)</option>
+                <option value="Premium (Platinum)">Premium (Platinum)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>ZIP Code</label>
+              <input name="zip" type="text" placeholder="e.g., 20901" required>
+            </div>
+            <div>
+              <label>Name</label>
+              <input name="name" type="text" placeholder="Your name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Phone</label>
+              <input name="phone" type="tel" placeholder="(301) 905-6017" required>
+            </div>
+            <div>
+              <label>Email</label>
+              <input name="email" type="email" placeholder="lojdetailing@gmail.com" required>
+            </div>
+          </div>
+          <label>Notes (optional)</label>
+          <textarea name="notes" placeholder="Any special requests, pet hair, stains, or gate codes?"></textarea>
+
+          <div class="submit">
+            <button type="submit" class="btn-primary">Get My Price &amp; Time</button>
+            <span style="color:var(--muted);font-size:12px">No payment required to request time.</span>
+          </div>
+        </form>
+        <div id="thanks" style="display:none;margin-top:12px;color:#86efac;font-weight:700">
+          Thank you! We received your request. We’ll text/call you shortly to confirm.
         </div>
       </div>
-
-      <!-- Simple booking form (static) -->
-      <form id="booking" class="card grid" style="grid-template-columns:1fr 1fr">
-        <h3 style="grid-column:1/-1;margin:0 0 6px">Instant Estimate</h3>
-        <div><label>Year</label><input placeholder="2019" /></div>
-        <div><label>Make</label><input placeholder="Toyota" /></div>
-        <div><label>Model</label><input placeholder="Camry" /></div>
-        <div>
-          <label>Package</label>
-          <select>
-            <option>Express (Bronze)</option>
-            <option>Standard (Silver)</option>
-            <option>Full Interior (Gold)</option>
-            <option>Premium (Platinum)</option>
-          </select>
-        </div>
-        <div><label>ZIP Code</label><input placeholder="20910" /></div>
-        <div><label>Name</label><input placeholder="Your name" /></div>
-        <div><label>Phone</label><input placeholder="(301) 905-6017" /></div>
-        <div><label>Email</label><input placeholder="you@example.com" /></div>
-        <div class="pricebar" style="grid-column:1/-1">
-          <span class="tag">No payment required to request time</span>
-          <button class="btn">Get My Price &amp; Time</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- PACKAGES -->
-    <section id="packages" class="grid pack" style="margin-top:26px">
-      <div class="card">
-        <h3>Express (Bronze)</h3>
-        <div class="price">$79–$119</div>
-        <ul class="clean">
-          <li>Hand wash &amp; dry</li>
-          <li>Wheels &amp; tires cleaned, tires dressed</li>
-          <li>Interior blow-out, light vacuum, wipe-down</li>
-          <li>Windows in/out</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Standard (Silver)</h3>
-        <div class="price">$149–$199</div>
-        <ul class="clean">
-          <li>Pre-treat bugs/tar, foam bath</li>
-          <li>Door jambs, fuel cap, exterior plastics dressed</li>
-          <li>Interior vacuum, plastics cleaned</li>
-          <li>Spray sealant (3–4 mo. protection)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Full Interior (Gold)</h3>
-        <div class="price">$229–$299</div>
-        <ul class="clean">
-          <li>Deep vacuum, pet-hair treatment</li>
-          <li>Fabric shampoo &amp; hot-water extraction</li>
-          <li>Leather clean &amp; condition</li>
-          <li>Odor neutralizer, windows</li>
-        </ul>
-      </div>
-      <div class="card" style="grid-column:1/-1">
-        <h3>Premium (Platinum)</h3>
-        <div class="price">$349–$499</div>
-        <ul class="clean">
-          <li>Everything in Gold + Silver</li>
-          <li>Decon wash (iron/fallout + clay as needed)</li>
-          <li>Machine polish (gloss enhancement)</li>
-          <li>Paint sealant or polymer wax (4–6 mo.)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FLEET -->
-    <section id="fleet" class="card" style="margin-top:26px">
-      <h2>Fleet Plans</h2>
-      <p class="sub">Weekly / bi-weekly onsite service for SUVs, pickups, vans &amp; patrol units. Fixed route pricing, digital logs, and COI on file.</p>
-      <ul class="clean">
-        <li>Maintenance wash (outside + quick interior): <strong>$35–$55</strong> per unit (volume-based)</li>
-        <li>Quarterly deep-clean options (interior shampoo / machine polish / sealant)</li>
-        <li>After-hours and weekend availability</li>
-      </ul>
-      <p style="margin-top:10px"><a class="btn" href="#contact">Request a fleet quote</a></p>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px">
-      <div class="card"><strong>“Looked brand new.”</strong><br><span class="sub">Full interior + sealant. Fast and professional.</span></div>
-      <div class="card"><strong>“On time &amp; meticulous.”</strong><br><span class="sub">Signed up our 12-vehicle fleet for weekly service.</span></div>
-      <div class="card"><strong>“Great value.”</strong><br><span class="sub">The spray sealant beads for months.</span></div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="grid" style="grid-template-columns:1fr 1fr;margin-top:26px">
-      <div class="card">
-        <h3>What products do you use?</h3>
-        <p class="sub">Professional-grade cleaners, neutral pH where possible, iron remover for decon, and a durable polymer paint sealant. We keep brands private—quality is guaranteed.</p>
-      </div>
-      <div class="card">
-        <h3>Do you need water or power?</h3>
-        <p class="sub">We’re fully mobile with our own water and power. Apartment/garage friendly.</p>
-      </div>
-      <div class="card">
-        <h3>Pet hair or heavy stains?</h3>
-        <p class="sub">Yes—add a heavy-soil/pet-hair fee ($25–$60) depending on condition.</p>
-      </div>
-      <div class="card">
-        <h3>Service area</h3>
-        <p class="sub">Most of MD/DC/VA within ~35 miles of Silver Spring. Message us for special trips.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card" style="margin-top:26px">
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> <a href="tel:+13019056017">(301) 905-6017</a></p>
-      <p><strong>Email:</strong> <a href="mailto:lojdetailing@gmail.com">lojdetailing@gmail.com</a></p>
-      <p><strong>Hours:</strong> Mon–Sat 8:00–6:30 · Sun by request</p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> LoJ Detailing · <a href="mailto:lojdetailing@gmail.com">Email</a> · <a href="tel:+13019056017">Call</a>
-      <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-    </footer>
+    </div>
   </div>
+
+  <!-- Packages -->
+  <section id="packages" class="wrap">
+    <h3 style="margin-bottom:12px">Packages</h3>
+    <div class="cards">
+      <div class="card p24">
+        <div class="pill">Express (Bronze)</div>
+        <p class="price" style="margin:10px 0">$99–$129</p>
+        <ul class="clean">
+          <li>Foam bath & hand wash</li>
+          <li>Wheels & tires cleaned; tires dressed</li>
+          <li>Quick interior vacuum & wipe-down</li>
+          <li>Windows inside & out</li>
+        </ul>
+      </div>
+      <div class="card p24">
+        <div class="pill">Standard (Silver)</div>
+        <p class="price" style="margin:10px 0">$149–$199</p>
+        <ul class="clean">
+          <li>Pre-treat bugs/tar; foam bath</li>
+          <li>Door jambs, fuel cap, exterior plastics dressed</li>
+          <li>Thorough interior wipe-down & vacuum</li>
+          <li>Professional paint sealant for gloss & protection</li>
+        </ul>
+      </div>
+      <div class="card p24">
+        <div class="pill">Full Interior (Gold)</div>
+        <p class="price" style="margin:10px 0">$229–$299</p>
+        <ul class="clean">
+          <li>Deep vacuum, pet hair removal (as needed)</li>
+          <li>Fabric shampoo & hot-water extraction or steam</li>
+          <li>Stain & odor treatment as needed</li>
+          <li>Protectants for plastics & fabrics</li>
+        </ul>
+      </div>
+      <div class="card p24" style="grid-column:1/-1">
+        <div class="pill">Premium (Platinum)</div>
+        <p class="price" style="margin:10px 0">$329–$449</p>
+        <ul class="clean">
+          <li>All Gold + exterior chemical decontamination (iron remover & clay)</li>
+          <li>One-step machine polish (gloss enhancement)</li>
+          <li>Premium paint protection (sealant or spray wax)</li>
+          <li>Trim/tire dressing & glass coating</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet -->
+  <section id="fleet" class="wrap split">
+    <div>
+      <h3>Fleet Plans</h3>
+      <p class="lead">Weekly or bi-weekly service for patrol cars, vans, SUVs, and trucks. Volume pricing with simple scheduling.</p>
+      <ul class="clean">
+        <li>Basic wash & interior wipe-down from **$35–$55** per vehicle (volume-based)</li>
+        <li>Interior packages & shampoo available on rotation</li>
+        <li>On-site water & power available</li>
+      </ul>
+      <p style="margin-top:8px"><a class="btn-ghost" href="tel:13019056017">Call fleet: (301) 905-6017</a></p>
+    </div>
+    <div class="card p24">
+      <h3>Service Area</h3>
+      <p>Based in Silver Spring. Typical radius ~25 miles covering Montgomery County, Prince George’s, DC, and nearby Northern VA.</p>
+      <p class="lead">Not sure you’re in range? Text us a ZIP code: <strong>(301) 905-6017</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Reviews & FAQ -->
+  <section class="wrap split" id="faq">
+    <div class="card p24">
+      <h3>Reviews</h3>
+      <p>“On time, great communication, and the car looks brand new.” — M.G.</p>
+      <p>“Pet hair gone, stains removed, 10/10.” — A.S.</p>
+      <p>“Booked for our small fleet. Fast and reliable.” — D.C.</p>
+    </div>
+    <div class="card p24">
+      <h3>FAQ</h3>
+      <p><strong>Do you need water or power?</strong><br>We carry both. If you have hookups, we can use them too.</p>
+      <p><strong>What products do you use?</strong><br>Professional-grade, body-shop safe cleaners, pH-neutral soaps, and premium protectants (brand-neutral by policy).</p>
+      <p><strong>How long does a detail take?</strong><br>Express 45–75 min; Gold 2–4 hrs; Platinum varies by vehicle condition.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="wrap">
+    <div class="card p24">
+      <h3>Contact</h3>
+      <p>Phone/Text: <a href="tel:13019056017">(301) 905-6017</a><br>
+         Email: <a href="mailto:lojdetailing@gmail.com">lojdetailing@gmail.com</a></p>
+      <p>Prefer to call? Tap the green button at the top. We’ll help you pick the right package in under 2 minutes.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © <script>document.write(new Date().getFullYear())</script> LoJ Detailing — MD • DC • VA
+    </div>
+  </footer>
+
+  <!-- ====== Simple form handler ======
+       1) Replace ZAPIER_WEBHOOK_URL with your Zapier “Catch Hook” URL.
+       2) This submits the form as JSON. You’ll get the data in your Gmail step.
+  -->
+  <script>
+    const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/REPLACE/THIS/URL"; // <-- paste your Zapier URL
+
+    const form = document.getElementById('leadForm');
+    const thanks = document.getElementById('thanks');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      if(!ZAPIER_WEBHOOK_URL.includes('hooks.zapier.com')){
+        alert('Form not connected yet. Ask your assistant where to paste the Zapier URL.');
+        return;
+      }
+      try{
+        await fetch(ZAPIER_WEBHOOK_URL, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            source:'lojdetailing.com',
+            ...data
+          })
+        });
+        form.reset();
+        thanks.style.display='block';
+      }catch(err){
+        alert('Could not submit. Please call or text (301) 905-6017.');
+      }
+    });
+  </script>
 </body>
 </html>
